@@ -1,0 +1,48 @@
+#include  <stdio.h>
+
+void  insert(int  x[ ] , int  n) ; 
+void  show(int  x[ ] , int  n) ;
+
+int  main()
+{
+ int  i , n , x[20] ;
+
+
+ printf("Enter the number of elements: ") ;
+ scanf("%d",&n) ;
+ printf("Enter the elements:\n") ;
+ for(i=0 ; i<n ; i++)
+    scanf("%d",&x[i]) ;
+
+ insert(x,n) ;
+
+ printf("Sorted array is as shown:\n") ;
+ for(i=0 ; i<n ; i++)
+    printf("%d " , x[i]) ;
+
+}
+
+void  insert(int  x[ ] , int  n)
+{
+ int  i , j , y ;
+
+ for(i=1 ; i<n ; i++)
+ {
+   y=x[i] ;
+   for(j=i-1 ; j>=0&&y<x[j] ; j--)  
+       x[j+1]=x[j] ;
+   x[j+1]=y ;
+
+   show(x,n) ;
+ }
+}
+
+void  show(int  x[ ] , int  n)
+{
+  int  i ;
+  for(i=0 ; i<n ; i++)
+    printf("%d " , x[i]) ;
+  printf("\n\n") ;
+}
+
+
