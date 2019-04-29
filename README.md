@@ -1,5 +1,6 @@
 # Data-Structure-and-Algorithm-concepts-in-C
 All the C code is available in this repository 
+-Atharva Patil
 Data Structure concept
 1. Binary Search
 2. Binary seach tree
